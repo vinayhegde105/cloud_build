@@ -23,13 +23,13 @@ terraform {
 resource "aws_instance" "EC2Instance" {
     ami = var.ami
     instance_type = var.instance_type
-    key_name = "vth"
+    key_name = "test-delete"
     availability_zone = "us-east-1d"
     tenancy = "default"
-    subnet_id = "subnet-0610a377e65a0067a"
+    subnet_id = "subnet-045a96461f4c2bd36"
     ebs_optimized = false
     vpc_security_group_ids = [
-        "sg-0732f06ad2c3baa21"
+        "sg-01103824f39bbe40f"
     ]
     source_dest_check = true
     root_block_device {
