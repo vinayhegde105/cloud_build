@@ -20,15 +20,11 @@ provider "aws" {
     region = var.region
 }
 
-# terraform {
-#   backend "s3" {
-#   }
-# }
 resource "aws_instance" "EC2Instance" {
     ami = var.ami
     instance_type = var.instance_type
     key_name = "test-delete"
-    availability_zone = "us-east-1d"
+    availability_zone = "us-east-1c"
     tenancy = "default"
     subnet_id = "subnet-045a96461f4c2bd36"
     ebs_optimized = false
